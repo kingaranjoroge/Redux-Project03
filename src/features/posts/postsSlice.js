@@ -1,8 +1,8 @@
-import { createSlice, nanoid, createAsyncThunk } from "@reduxjs/toolkit";
-import { sub } from 'date-fns';
-import axios from "axios";
+import { createSlice, nanoid, createAsyncThunk } from "@reduxjs/toolkit"
+import { sub } from 'date-fns'
+import axios from "axios"
 
-const POSTS_URL = 'https://jsonplaceholder.typicode.com/posts';
+const POSTS_URL = 'https://jsonplaceholder.typicode.com/posts'
 
 const initialState = {
     posts: [],
@@ -111,9 +111,9 @@ const postsSlice = createSlice({
     }
 })
 
-export const selectAllPosts = (state) => state.posts.posts;
-export const getPostsStatus = (state) => state.posts.status;
-export const getPostsError = (state) => state.posts.error;
+export const selectAllPosts = (state) => state.posts.posts
+export const getPostsStatus = (state) => state.posts.status
+export const getPostsError = (state) => state.posts.error
 
 export const { postAdded, reactionAdded } = postsSlice.actions
 
